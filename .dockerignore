@@ -32,3 +32,7 @@ logs/
 # Documentation
 README.md
 docs/
+
+build/*
+!build/libs/
+!build/libs/*.jar
