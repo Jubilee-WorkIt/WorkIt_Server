@@ -1,11 +1,6 @@
-version: '3.8'
-
 services:
   workit-backend:
-    build:
-      context: .          # ← 이 줄 추가!
-      dockerfile: Dockerfile
-    image: workit-backend:latest
+    image: workit-spring_prod:latest
     container_name: workit-api
     ports:
       - "8087:8087"
