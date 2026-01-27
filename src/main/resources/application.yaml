@@ -10,7 +10,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update  # create → update로 변경! (데이터 보존)
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
@@ -34,6 +34,13 @@ springdoc:
     path: /api-docs
   default-consumes-media-type: application/json
   default-produces-media-type: application/json
+
+workit:
+  jwt:
+    secret: ${JWT_SECRET:workit-dev-secret-key-min-256-bits-for-hs256}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  google:
+    client-id: ${GOOGLE_CLIENT_ID:}
 
 management:
   endpoints:

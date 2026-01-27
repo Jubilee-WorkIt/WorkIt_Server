@@ -26,8 +26,9 @@ public class SwaggerConfig {
                                 .name("WorkIt Team")
                                 .url("https://github.com/Jubilee-WorkIt")))
                 .servers(List.of(
-                        new Server().url("http://localhost:8087").description("Development server"),
-                        new Server().url("https://workit.digitalbasis.com/index.html").description("Production server")
+                        new Server().url("https://api-workit.mmhs.app").description("API WorkIt (mmhs)"),
+                        new Server().url("http://localhost:8080").description("Development server"),
+                        new Server().url("https://workit.digitalbasis.com").description("Production server")
                 ))
                 .components(new Components()
                         .addSecuritySchemes("bearerAuth",
