@@ -149,9 +149,10 @@ public class AuthService {
         if (email == null || email.isBlank()) {
             email = googleId + "@google.workit.local";
         }
+        final String lookupEmail = email;
 
         User user = userRepository.findByGoogleId(googleId)
-                .or(() -> userRepository.findByEmail(email))
+                .or(() -> userRepository.findByEmail(lookupEmail))
                 .orElse(null);
 
         if (user == null) {
