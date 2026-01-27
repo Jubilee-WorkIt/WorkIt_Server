@@ -29,6 +29,12 @@ public class User {
     @Column(name = "apple_id", unique = true)
     private String appleId;
 
+    @Column(name = "location_id")
+    private Long locationId;
+
+    @Column(columnDefinition = "JSON")
+    private String preferences;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
@@ -72,4 +78,10 @@ public class User {
 
     public String getAppleId() { return appleId; }
     public void setAppleId(String appleId) { this.appleId = appleId; }
+
+    public Long getLocationId() { return locationId; }
+    public void setLocationId(Long locationId) { this.locationId = locationId; }
+
+    public String getPreferences() { return preferences; }
+    public void setPreferences(String preferences) { this.preferences = preferences; }
 }
